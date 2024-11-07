@@ -1,0 +1,18 @@
+clc; 
+clf; 
+close all; 
+clear all; 
+n1=input('enter the starting point of the signal:n_start='); 
+n2=input('enter the ending point of the signal:n_end='); 
+sample_points=-n1:1:n2; 
+amplitude=[zeros(1,n1)  ones(1,n2+1)]; 
+subplot(121); 
+stem(sample_points,amplitude); 
+grid on; 
+xlabel('sample points'); 
+ylabel('amplitude'); 
+subplot(122); 
+plot(sample_points,amplitude); 
+grid on; 
+xlabel('sample points'); 
+ylabel('amplitude');

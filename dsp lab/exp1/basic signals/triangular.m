@@ -1,0 +1,21 @@
+clc; 
+clf; 
+clear all; 
+close all; 
+am=input('enter the amplitude='); 
+fm=input('enter the frequency='); 
+cy=input('enter the number of cycles required:'); 
+t=0:(1/(50*fm)):cy/fm; 
+Amplitude=am*sawtooth(2*pi*fm*t,.50); 
+subplot(121) 
+plot(t,Amplitude); 
+grid on; 
+xlabel('sample points'); 
+ylabel('Amplitude'); 
+title('triangular'); 
+subplot(122); 
+stem(t,Amplitude); 
+grid on; 
+xlabel('sample points'); 
+ylabel('Amplitude'); 
+title('triangular'); 
